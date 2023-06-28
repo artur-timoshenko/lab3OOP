@@ -1,5 +1,4 @@
-﻿// Laba 3 Sem4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -8,7 +7,7 @@
 #include <cassert>
 #include <thread>
 
-// Функція для генерації випадкових чисел у заданому діапазоні
+
 void fillArrayWithRandomNumbers(std::vector<int>& arr, int min, int max)
 {
     std::random_device rd;
@@ -20,7 +19,7 @@ void fillArrayWithRandomNumbers(std::vector<int>& arr, int min, int max)
     }
 }
 
-// Функція для обміну значень двох елементів масиву
+
 void swap(int& a, int& b)
 {
     int temp = a;
@@ -28,7 +27,7 @@ void swap(int& a, int& b)
     b = temp;
 }
 
-// Функція для розділення масиву у Quicksort
+
 int partition(std::vector<int>& arr, int low, int high)
 {
     int pivot = arr[high];
@@ -45,7 +44,7 @@ int partition(std::vector<int>& arr, int low, int high)
     return i + 1;
 }
 
-// Послідовне сортування Quicksort
+
 void quickSortSequential(std::vector<int>& arr, int low, int high)
 {
     if (low < high) {
@@ -56,7 +55,7 @@ void quickSortSequential(std::vector<int>& arr, int low, int high)
     }
 }
 
-// Паралельне сортування Quicksort з використанням паралельних регіонів OpenMP
+
 void quickSortParallel(std::vector<int>& arr, int low, int high, int numThreads)
 {
     if (low < high) {
@@ -84,7 +83,7 @@ void quickSortParallel(std::vector<int>& arr, int low, int high, int numThreads)
     }
 }
 
-// Послідовне сортування Merge Sort
+
 void mergeSortSequential(std::vector<int>& arr, int low, int high)
 {
     if (low < high) {
@@ -129,7 +128,7 @@ void mergeSortSequential(std::vector<int>& arr, int low, int high)
     }
 }
 
-// Паралельне сортування Merge Sort з використанням паралельних регіонів OpenMP
+
 void mergeSortParallel(std::vector<int>& arr, int low, int high, int numThreads)
 {
     if (low < high) {
@@ -184,7 +183,7 @@ void mergeSortParallel(std::vector<int>& arr, int low, int high, int numThreads)
     }
 }
 
-// Послідовне сортування Heap Sort
+
 void heapify(std::vector<int>& arr, int n, int i)
 {
     int largest = i;
@@ -223,7 +222,7 @@ void heapSortSequential(std::vector<int>& arr)
     }
 }
 
-// Паралельне сортування Heap Sort з використанням паралельних регіонів OpenMP
+
 void heapSortParallel(std::vector<int>& arr, int numThreads)
 {
     int n = arr.size();
